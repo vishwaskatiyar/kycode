@@ -1,0 +1,116 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #2d2b2bf8, #000000ef);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: fadeIn 1 ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  animation: slideInDown 1s ease;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+p {
+  font-size: 24px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#output {
+  margin-top: 20px;
+  font-size: 36px;
+  letter-spacing: 2px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 198, 255, 0.2);
+  transition: background-color 0.3s ease;
+  animation: pulse 1s infinite alternate;
+  border: 2px solid rgba(0, 198, 255, 0.5);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 198, 255, 0.5);
+  }
+
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.8);
+  }
+}
+#output.futuristic {
+  background-color: rgba(0, 198, 255, 0.4);
+  animation: glow 1s infinite alternate, pulse 1s infinite alternate;
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.8);
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 198, 255, 0.5), 0 0 20px rgba(0, 198, 255, 0.5),
+      0 0 30px rgba(0, 198, 255, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.5), 0 0 30px rgba(0, 198, 255, 0.5),
+      0 0 40px rgba(0, 198, 255, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgba(0, 198, 255, 0.5), 0 0 20px rgba(0, 198, 255, 0.5),
+      0 0 30px rgba(0, 198, 255, 0.5);
+  }
+}
